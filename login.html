@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="login.css">
+    <title>Tanulmanyi Rendszer</title>
+
+    <script>
+        function myLogin() {
+            let nev = "nrb";
+            let pass = "asd";
+
+            let name = document.getElementById("name").value;
+            let password = document.getElementById("password").value;
+            console.log(name);
+            console.log(password);
+
+            if(name == nev && password == pass) {
+                alert("Sikeres bejelentkezes!");
+                self.location = "kezdolap.html";
+            } else if (name != nev) {
+                alert("Helytelen felhasznalonev!");
+            } else if (password != pass) {
+                alert("Helytelen jelszo!");
+            }
+        }
+        function showPassword() {
+            let x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="interface">
+            <h2>Universitas Debreceniensis</h2>
+            <img src="logo.png" alt="Logo" style="width:120px;height:120px">
+            <label for="name">Username:</label><br>
+            <input type="text" id="name" name="name" class="custom_input"><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" class="custom_input"><br><br>
+            <input type="checkbox" onclick="showPassword()"><a class="check_button">Show Password</a><br><br>
+            <input type="submit" value="Login" class="login_button" onclick="myLogin()">
+        </div>
+    </div>
+</body>

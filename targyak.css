@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.courses--table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.courses--table td, .courses--table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.courses--table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.courses--table tr:hover {
+    background-color: #ddd;
+}
+
+.courses--table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #004725;
+    color: white;
+}
+
+.logo_title {
+    position: relative;
+    height: 120px;
+    width: 450px;
+    top: 0px;
+    left: 5%; 
+}
+
+.logo_title img {
+    float: left;
+}
+
+.logo_title h1, .logo_title h3 {
+    line-height: 0.1;
+    color: #004725;
+    position: relative;
+    top: 25%;
+}
+
+.logo_title h1 {
+    font-size: 42px;
+}

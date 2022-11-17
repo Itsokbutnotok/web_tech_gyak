@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="targyak.css">
+        <title>Tanulmanyi Rendszer</title>
+
+        <script>
+
+            let courses = new Array(10);
+            courses[0] = {name: "Programozas 1", credit: "6", 
+                semester: "2", type: "Gyakorlati jegy", code: "ABC123"};
+            courses[1] = {name: "Programozas 2", credit: "6", 
+                semester: "3", type: "Gyakorlati jegy", code: "ABC333"};
+            courses[2] = {name: "Programozas 3", credit: "6", 
+                semester: "4", type: "Kollekvium", code: "ABD523"};
+            courses[3] = {name: "Kalkulus 1", credit: "6", 
+                semester: "3", type: "Gyakorlati jegy", code: "CDA323"};
+            courses[4] = {name: "Kalkulus 2", credit: "6", 
+                semester: "4", type: "Kollekvium", code: "ADC153"};
+            courses[5] = {name: "Logika", credit: "6", 
+                semester: "1", type: "Gyakorlati jegy", code: "KJL923"};
+            courses[6] = {name: "Diszkret Matematika", credit: "6", 
+                semester: "1", type: "Gyakorlati jegy", code: "ALO123"};
+            courses[7] = {name: "Web Technologiak", credit: "6", 
+                semester: "3", type: "Gyakorlati jegy", code: "AGHC23"};
+            courses[8] = {name: "Halozati Arhitekturak", credit: "6", 
+                semester: "2", type: "Gyakorlati jegy", code: "ABC683"};
+            courses[9] = {name: "Programozas 1", credit: "6", 
+                semester: "2", type: "Gyakorlati jegy", code: "ULK123"};
+
+            function createTable() {
+                let table = document.querySelector(".courses--table");
+                //console.log("table: " + table);
+                //let tableBody = document.createElement;
+                courses.forEach( (course) => {
+                    let row = document.createElement("tr");
+                    let name = document.createElement("td");
+                    let credit = document.createElement("td");
+                    let semester = document.createElement("td");
+                    let type = document.createElement("td");
+                    let code = document.createElement("td");
+
+                    name.appendChild(document.createTextNode(course.name));
+                    credit.appendChild(document.createTextNode(course.credit));
+                    semester.appendChild(document.createTextNode(course.semester));
+                    type.appendChild(document.createTextNode(course.type));
+                    code.appendChild(document.createTextNode(course.code));
+
+                    row.appendChild(name);
+                    row.appendChild(credit);
+                    row.appendChild(semester);
+                    row.appendChild(type);
+                    row.appendChild(code);
+
+                    table.appendChild(row);
+                });
+
+            }
+
+        </script>
+
+    </head>
+    <body onload="createTable()">
+
+        <div class="logo_title">
+            <img src="logo.png" alt="Logo" style="width:100px;height:100px">
+            <h3>Debreceni Egyetem</h3>
+            <h1>Infromatika Kar</h1>
+        </div>
+
+        <div class="nav-bar">
+            <div><a href="kezdolap.html">Kezdolap</a></div>
+            <div><a href="szakok.html">Szakok</a></div>
+            <div><a>Targyak</a></div>
+            <div><a href="szakok.html">Oktatok</a></div>
+            <div><a href="szakok.html">Esemenyek</a></div>
+            <div><a href="szakok.html">Hirek</a></div>
+            <div><a href="szakok.html">Egyeb</a></div>
+        </div>
+
+        <table class="courses--table">
+            <tr>
+                <th>Nev</th>
+                <th>Kredit</th>
+                <th>Ajanlott szemeszter</th>
+                <th>Tipus</th>
+                <th>Targykod</th>
+            </tr>
+        </table>
+
+
+
+    </body>
+</html>
